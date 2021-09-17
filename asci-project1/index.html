@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Search Website</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style >			
+			.Summary{
+				font-family: cursive;
+			}
+			.trendBtn{
+				font-family: cursive;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 class="title">Movie Mania</h1>
+		</div>
+		<header>
+			
+			
+			<form id="form" style="height: 59px;">
+				
+				<input type="text" autocomplete="off" id="Search" placeholder="Search Movies..." class="Search" >
+				
+				
+				
+			</form>
+			
+		</header>
+			<div class="btn" style="justify-content: center;align-content: center;display: flex;padding: 10px 10px;">
+				<button type="button" class="trendBtn" id="trend">Trending on TV</button>
+				<button type="button" class="trendBtn" id="trMovie">Trending Movies</button>
+				<button type="button" class="trendBtn" id="engMovie">English</button>
+				<button type="button" class="trendBtn" id="hinMovie">Hindi</button>
+				<button type="button" class="trendBtn" id="hinTV">Hindi TV shows</button>
+			</div>
+		<div id="tags">
+			<div class="tag">Action</div>
+			<div class="tag">Adventure</div>
+			<div class="tag">Drama</div>
+			<div class="tag">Comedy</div>
+		</div>
+		
+		
+		
+		<hr style=" width: 5%; border-style: dotted none none none; border-top: 10px dotted grey ;">
+		<main id="main">
+			<div class="movie">
+				<img src="back-img.jpg">
+				<div class="movie-info">
+					<h3>
+					Movie Title
+					<span  class="green">9.8</span>
+					</h3>
+					
+				</div>
+				<div class="Summary">
+					This region will hold summary of the movie.
+				</div>
+				
+			</div>
+			<div class="movie">
+				<img src="back-img.jpg">
+				<div class="movie-info">
+					<h3>
+					Movie Title
+					<span class="green">9.8</span>
+					</h3>
+					
+				</div>
+				<div class="Summary">
+					This region will hold summary of the movie.
+				</div>
+				
+			</div>
+			<div class="movie">
+				<img src="back-img.jpg">
+				<div class="movie-info">
+					<h3>
+					Movie Title
+					<span  class="green">9.8</span>
+					</h3>
+					
+				</div>
+				<div class="Summary">
+					This region will hold summary of the movie.
+				</div>
+				
+			</div>
+		</main>
+		<div class="pagination" >
+			<div class="page" id="prev"><</div>
+			<div class="current" id="current">1</div>
+			<div class="page" id="next">></div>
+		</div>
+		<hr style=" width: 5%; border-style: dotted none none none; border-top: 10px dotted grey ; margin-top: 0;">
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

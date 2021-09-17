@@ -1,0 +1,476 @@
+/*background color*/
+html { 
+  /*
+  background: url("D:\\Prerna\\Images\\111.jpg") no-repeat center center fixed; */
+  background: url("https://github.com/pt3002/ToDoList/blob/main/111.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*body{
+  background-color:rgb(92, 183, 206);
+}*/
+
+/*top heading CSS*/
+.topheading{
+  font-size:3rem;
+  font-weight:1000;
+  margin-left: 620px;
+  text-align: center;
+  color:black;
+}
+.styling{
+  font-family: 'Roboto', sans-serif;
+}
+
+.headingntable{
+  display:flex;
+
+}
+/*date CSS*/
+.date{
+  font-size:2rem;
+  font-weight:1000;
+  margin:1rem 0 3rem;
+  text-align: center;
+  color:black;
+}
+
+/*add-to-do class CSS*/
+.add-to-do{
+margin-top: 18px;
+display: flex;
+}
+
+/*input box CSS*/
+.inputtext{
+font-family: 'Roboto', sans-serif;
+font-weight: bold;
+color:black;
+font-size: 1.2rem;
+margin-right:20px;
+margin-left:300px;
+padding: 1.5rem 2rem;
+border-radius: 0.2rem;
+background-color: rgb(255, 255, 255);
+border: none;
+width: 700px;
+display: block;
+border-bottom: 0.3rem solid transparent;
+transition: all 0.3s;
+}
+
+/*ADD button CSS*/
+.btn{
+display: block;
+margin-left:0%;
+margin-right: auto;
+background:black;
+color:white;
+border:none;
+position:relative;
+height:75px;
+font-size:1.6em;
+padding:0 2em;
+cursor:pointer;
+transition:800ms ease all;
+outline:none;
+}
+.btn:hover{
+background:white;
+color:black;
+}
+.btn:before,.btn:after{
+content:'';
+position:absolute;
+top:0;
+right:0;
+height:2px;
+width:0;
+background: black;
+transition:400ms ease all;
+}
+.btn:after{
+right:inherit;
+top:inherit;
+left:0;
+bottom:0;
+}
+.btn:hover:before,.btn:hover:after{
+width:100%;
+transition:800ms ease all;
+}
+
+.input_div{
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  margin-left:270px;
+  height: auto;
+  width: 500px;
+  padding: 20px;
+}
+
+/*PRIORITY SELECT heading code*/
+.priorityheading{
+  font-size:2rem;
+  font-weight:1000;
+  color:black;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+/*CSS code for input_div class*/
+.input_div{
+  display: flex;
+}
+
+/*css code for all radiobuttons*/
+.c {
+  display: block;
+  position: relative;
+  padding-left: 190px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 1000;
+  font-size: 30px;
+}
+
+.c input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-left: 150px;
+  margin-top: 5px;
+}
+
+.c:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.c input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.c input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.c .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/*CSS for list of all tasks*/
+#list{
+list-style: none;
+}
+
+/*CSS code if high RB is selected*/
+.text1{
+list-style: none;
+height: 50px;
+margin-left: 65px;
+background:rgb(214, 63, 63); 
+position:relative;
+margin-bottom: 10px;
+font-size: 20px;
+text-indent: 25px;
+align-items: center;
+justify-content: space-between;
+display: flex;
+width:650px;
+border-radius: 0.2rem;
+}
+
+/*CSS code if medium RB is selected*/
+.text2{
+list-style: none;
+height: 50px;
+margin-left: 65px;
+background:rgb(235, 231, 25); 
+position:relative;
+margin-bottom: 10px;
+font-size: 20px;
+text-indent: 25px;
+align-items: center;
+justify-content: space-between;
+display: flex;
+width:650px;
+border-radius: 0.2rem;
+}
+
+/*CSS code if low RB is selected*/
+.text3{
+list-style: none;
+height: 50px;
+margin-left: 65px;
+background:rgb(41, 128, 0); 
+position:relative;
+margin-bottom: 10px;
+font-size: 20px;
+text-indent: 25px;
+align-items: center;
+justify-content: space-between;
+display: flex;
+width:650px;
+border-radius: 0.2rem;
+}
+
+/*trash/remove button css*/
+#deletebutton{
+position: relative;
+background: black;
+color:whitesmoke;
+cursor:pointer;
+width:65px;
+border-radius:0 3px 3px 0;
+margin-left: 0px;
+height: 50px;
+margin-top: 20px;
+}
+
+#checkboxinput{
+position: relative;
+background: black;
+color:whitesmoke;
+cursor:pointer;
+width:65px;
+border-radius:0 3px 3px 0;
+margin-left: 0px;
+height: 50px;
+margin-top: 20px;
+margin-right: 0px;
+}
+
+#updatebutton{
+position: relative;
+background: black;
+color:whitesmoke;
+cursor:pointer;
+width:65px;
+border-radius:0 3px 3px 0;
+margin-left: 0px;
+height: 50px;
+margin-top: 20px;
+}
+/*list class x css*/
+.x{
+display: flex;
+}
+
+/*table css*/
+table {
+border: 1px solid #ccc;
+border-collapse: collapse;
+margin-left: 300px;
+width:265px;
+position: relative;
+height: fit-content;
+}
+
+/*table caption css*/
+/*
+.caption {
+font-family: 'Roboto', sans-serif;
+font-weight: bold;
+color:black;
+font-size: 1.2rem;
+margin-right:20px;
+margin-left:640px;
+padding: 1.5rem 2rem;
+border-radius: 0.2rem;
+background-color: rgb(255, 255, 255);
+border: none;
+width: 200px;
+display: block;
+border-bottom: 0.3rem solid transparent;
+height: 20px;
+}*/
+
+/*table row css*/
+table tr {
+display: flex;
+}
+
+/*table data css*/
+table td {
+display: block;
+font-size: .8em;
+text-align: center;
+border-color: black;
+border-width: 20px;
+}
+
+/*css for col1 in color code table*/
+.colorname{
+width: 130px;
+background-color: wheat;
+font-family: 'Roboto', sans-serif;
+font-weight: bolder;
+color:black;
+font-size: 1.2rem;
+
+}
+
+/*color code for high*/
+.color1{
+background-color: rgb(214, 63, 63);
+width:130px;
+
+}
+
+/*color code for medium*/
+.color2{
+background-color: rgb(144,238,144);
+width:130px;
+}
+
+
+/*color code for low*/
+.color3{
+background-color: rgb(125, 216, 247);
+width:130px;
+}
+
+.c1 {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 350px;
+  margin-right: 0px;
+}
+
+/* Hide the browser's default checkbox */
+.c1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmarkforCB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 65px;
+  background-color: #eee;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+/* On mouse-over, add a grey background color */
+.c1:hover input ~ .checkmarkforCB {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.c1 input:checked ~ .checkmarkforCB {
+  background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmarkforCB:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.c1 input:checked ~ .checkmarkforCB:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.c1 .checkmarkforCB:after {
+  size: 20px;
+  top:5px;
+  margin-left: 30px;
+  width: 10px;
+  height: 30px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*CLEAR ALL BUTTON*/
+.btn2{
+  display: block;
+  margin-left:650px;
+  margin-right: auto;
+  background:black;
+  color:white;
+  border:none;
+  position:relative;
+  height:75px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  }
+  .btn2:hover{
+  background:white;
+  color:black;
+  }
+  .btn2:before,.btn2:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+  }
+  .btn2:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+  }
+  .btn2:hover:before,.btn2:hover:after{
+  width:100%;
+  transition:800ms ease all;
+  }

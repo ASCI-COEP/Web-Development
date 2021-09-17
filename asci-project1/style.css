@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'
+	);
+*{
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'CoreCircus';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot');
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype');
+}
+body{
+	font-family: 'Roboto',sans-serif;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	min-height: 100vh;
+	/* background-color: var(--primary-color); */
+    /* background-image: url("https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png"); */
+	background: url("https://wallpapercave.com/wp/wp3616315.jpg");
+	background-size: 150vh;
+	backdrop-filter:  brightness(50%);
+}
+:root{
+	--primary-color: #2C2E43 ;
+	--secondary-color: #595260  ;
+}
+
+header{
+	/* padding: 0.5rem; */
+	display: flex;
+	justify-content: flex-start;
+	/* background-color: var(--secondary-color); */
+	/*background-color: #50E3C2;*/
+	border-radius: 50px;
+	position: fixed;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	border-width: 10px;
+	flex-wrap: wrap;
+	height: 80px;
+	/* background: url("https://cdn.hipwallpaper.com/i/54/1/2EJAPF.jpg"); */
+	 background: url("https://wallpaperaccess.com/full/336786.jpg"); 
+	 background-size: 150vh; 
+}
+
+.Search{
+	/* background-color: transparent; */
+	/* background-color: #FFE9D6; */
+	background-color: #323232;
+	border-radius: 50px;
+	border: 2px solid black;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	font-family: inherit;
+	color: #DEFF8B;
+	margin-top: 20px;
+	margin-left: 10%;
+}
+.Search:focus{
+	outline: 0;
+	background-color: #4A3F35;
+}
+.Search:placeholder{
+	color: rgb(240, 234, 234);
+}
+.Search:hover{
+	background-color: #4A3F35;
+}
+main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.movie{
+	width: 300px;
+	margin: 1rem;
+	border-radius: 10px;
+	box-shadow: 6.2px 7px 10px rgb(241 239 239 / 38%);
+	/* box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1); */
+	/* background-color: var(--secondary-color); */
+	background-color: #a10e0e;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+}
+.movie img{
+	width: 100%;
+}
+.movie-info{
+	color: #FFBCBC;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+}
+.movie-info h3{
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.movie-info span{
+	background-color: var(--primary-color);
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
+.movie-info span.green{
+	color: lightgreen;
+}
+.movie-info span.orange{
+	color: orange;
+}
+.movie-info span.red{
+	color: red;
+}
+.Summary{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* background-color: var(--secondary-color); */
+	background-color: #fe7a21;
+	padding: 1rem;
+	max-height: 100%;
+	transform: translateY(600px);
+	transition: transform 1s ease-in;
+}
+.movie:hover .Summary{
+	transform: translateY(0px);
+
+}
+.trendBtn{
+	/* background-color: #C68B59; */
+	
+	/* background-color: #a10e0e; */
+	background-color: #B85C38;
+	border-radius: 50px; 
+	border: 1px solid var(--primary-color);
+	
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	
+	color: white;
+}
+.trendBtn:hover{
+	
+	background-color: #CC561E;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px #0000009c;
+	cursor: pointer;
+	color: white;
+}
+.trendBtn:focus{
+	/* background-color: #F1CA89; */
+	background-color: #CC561E;
+	cursor: pointer;
+
+}
+#tags{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+}
+.tag{
+	
+	color: black;
+	padding: 10px 20px;
+	background-color: orange;
+	border-radius: 50px;
+	margin: 5px 5px;
+	display: inline-block;
+	cursor: pointer;
+	font-family:  'Fira Sans', sans-serif;
+	
+}
+.tag:hover{
+	color: white;
+	box-shadow: 5px 5px 5px black;
+}
+
+.trendBtn{
+	margin: 10px;
+}
+.tag.highlight{
+	background-color: rgba(255, 0, 0, 0.616);
+}
+.tag:hover {
+    background-color: rgba(255, 0, 0, 0.945);}
+.noRes{
+	color: white;
+}
+.pagination{
+	display: flex;
+	margin: 10px 30px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+.page{
+	padding: 30px;
+	font-size: 35px;
+	cursor: pointer;
+
+}
+.page.disabled{
+	cursor: not-allowed;
+	color: grey;
+}
+.current{
+	padding:10px 20px;
+	border-radius:100%;
+	border: 5px solid white;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: default;
+}
+
+ .wrapper{
+	width: 100%;
+	font-size: 18px;
+	margin: 0;
+
+ }
+
+.title{
+	padding-top:10px ; 
+   /* padding-right: 10px;  */
+   color: #00f3ff;
+   text-align: center;
+   font-family: 'CoreCircus', sans-serif;
+   text-transform: uppercase;
+  /* background: url("https://c4.wallpaperflare.com/wallpaper/203/117/172/fire-4k-hd-background-download-wallpaper-preview.jpg" ) repeat-x;
+  background-clip: text; 
+   background-size: contain;
+   animation: fire 14s linear infinite;*/
+   
+   
+}
+
+@keyframes fire {
+   0%{
+	   background-position: left 0px top 0px;
+   }
+   /* 50%{
+	   background-position: left 130px top -35px; */
+   /* } */
+   100%{
+	   background-position: left 250px top 0px;
+   }
+}

@@ -1,0 +1,597 @@
+/* font style */
+
+@font-face {
+    font-family: 'optiengraversoldenglishRg';
+    src: url('/css/fonts/optiengraversoldenglish-webfont.woff2') format('woff2'),
+         url('/css/fonts/optiengraversoldenglish-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.navbar-brand{
+
+    font-family: 'optiengraversoldenglishRg';
+    font-size: 1.42cm;
+}
+
+
+
+/* General CSS */
+body {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background: #ffffff;
+}
+
+a {
+    color: #000000;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #000000;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #000000;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    color: #000000;
+    font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #000000;
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    border-radius: 4px;
+    z-index: 11;
+}
+
+.back-to-top:hover {
+    background: #000000;
+}
+
+.back-to-top i {
+    padding-top: 9px;
+    color: #ffffff;
+}
+
+
+/* Form input CSS */
+.form-control,
+.custom-select {
+    width: 100%;
+    height: 35px;
+    padding: 5px 15px;
+    color: #999999;
+    border: 1px solid #cccccc;
+    margin-bottom: 15px
+}
+
+.form-control:focus,
+.custom-select:focus {
+    box-shadow: none;
+    border-color: #000000;
+}
+
+.custom-radio,
+.custom-checkbox {
+    margin-bottom: 15px;
+}
+
+.custom-radio .custom-control-label::before,
+.custom-checkbox .custom-control-label::before {
+    border-color: #cccccc;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    color: #ffffff;
+    background: #000000;
+}
+
+button.btn-dark {
+    color: #ffffff;
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+button.btn-dark:hover {
+    color: #ffffff;
+    background: #000000;
+    border-color: #000000;
+}
+
+
+/* Nav Bar  */
+
+.navbar {
+    background-color: #000000;
+}
+
+.nav-item{
+    padding-right: 1.5em;
+    font-size: 0.475cm;
+
+}
+
+#home{
+    padding-left: 1.42em;
+}
+
+/* Top News */
+
+ .top-news {
+    position: relative;
+    width: 100%;
+    padding: 30px 0 0 0;
+}
+
+.top-news .tn-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.top-news .tn-img img {
+    width: 100%;
+    
+}
+
+/* Catagory news */
+
+.module {
+    
+    overflow: hidden;
+  }
+ 
+.truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+  }
+
+  .truncate2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+  }
+
+.cat-news {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.cat-news .col-md-6 {
+    margin-bottom: 30px;
+}
+
+.cat-news {
+    color: black;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.cat-news .cn-img {
+    position: relative;
+    overflow: hidden;
+    margin-top: 25px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cat-news .cn-img img {
+    width: 100%;
+}
+
+
+.cat-news .cn-img:hover img {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(0.95); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.cat-news .cn-title {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    padding: 15px 10px 15px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
+    display: flex;
+    align-items: flex-end;
+}
+
+.cat-news .cn-title a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.cat-news .cn-title a:hover {
+    color: white; 
+}
+
+.cat-news .slick-prev,
+.cat-news .slick-next {
+    top: -62px;
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+    transition: .5s;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 4px;
+}
+
+.cat-news .slick-prev {
+    left: calc(100% - 85px);
+}
+
+.cat-news .slick-next {
+    right: 14px;
+}
+
+.cat-news .slick-prev:hover,
+.cat-news .slick-prev:focus,
+.cat-news .slick-next:hover,
+.cat-news .slick-next:focus {
+    color: #ffffff;
+    background: #000000;
+}
+
+.cat-news .slick-prev::before,
+.cat-news .slick-next::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.cat-news .slick-prev::before {
+    content: "\f104";
+}
+
+.cat-news .slick-next::before {
+    content: "\f105";
+}
+
+.news{
+    font-family: 'Raleway', sans-serif;
+}
+
+.hover-underline-animation {
+    display:inline-block;
+    position: relative;
+    color: white;
+    padding-bottom: 3px;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+}
+
+hr {
+    background-color:rgb(0, 0, 0)
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+
+/* Breadcrumb CSS */
+.breadcrumb-wrap {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+}
+
+.breadcrumb-wrap .breadcrumb {
+    margin: 25px 0 0 0;
+    padding: 0;
+    background: none;
+}
+
+.breadcrumb-wrap .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #353535;
+}
+
+.breadcrumb-wrap .breadcrumb .breadcrumb-item.active {
+    color: #353535;
+}
+
+
+/* Contact CSS */
+.contact {
+    position: relative;
+    padding: 25px 0 15px 0;
+}
+
+.contact .contact-form,
+.contact .contact-info {
+    margin-bottom: 45px;
+}
+
+.contact .contact-info h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact .contact-info h4 i {
+    color: #000000;
+    margin-right: 5px;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.contact .social a i {
+    color: #000000;
+}
+
+.contact .social a:hover {
+    background: #000000;
+    border-color: #000000;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+}
+
+
+/* Footer CSS */
+
+.footer {
+    position: relative;
+    padding: 60px 0 0 0;
+    background: #111111;
+}
+
+.footer .footer-widget {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.footer .footer-widget .title {
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 3px double #ffffff;
+}
+
+.footer .footer-widget p {
+    color: #ffffff;
+}
+
+.footer .footer-widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer .footer-widget ul li {
+    margin-bottom: 12px; 
+}
+
+.footer .footer-widget ul li:last-child {
+    margin-bottom: 0; 
+}
+
+.footer .footer-widget ul li a {
+    color: #ffffff;
+    white-space: nowrap;
+    display: block;
+    line-height: 23px;
+}
+
+.footer .footer-widget ul li a::before {
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.footer .footer-widget ul li a:hover {
+    padding-left: 10px;
+    color: #000000;
+}
+
+.footer .contact-info p {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.footer .contact-info p i {
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.footer .social {
+    position: relative;
+    width: 100%;
+}
+
+.footer .social a {
+    display: inline-block;
+    margin: 10px 5px 0 0;
+    width: 35px;
+    height: 35px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+.footer .social a i {
+    color: #111111;
+}
+
+.footer .social a:hover {
+    background: #000000;
+}
+
+.footer .social a:hover i {
+    color: #ffffff;
+}
+
+
+
+h2{
+    color: rgb(0, 0, 0);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* FILTER CSS */
+.btn-outline-dark{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 18px;
+}
+
+.btn-outline-dark:focus { 
+    box-shadow: none;
+}
+
+/* readmore css */
+
+.container_readmore{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.hr{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.alignleft{
+    float: left;
+}
+
+.alignright{
+    float: right;
+}
+
+.alignright :hover{
+    text-decoration: underline;
+}
+
+/* footer */
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 325px; /*.push must be the same height as .footer*/
+    
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+/* card radius */
+
+.card{
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+}
+
+.tn-img{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+}
+
+/* filter btn */
+.filter-btn{
+    margin-right: 0.42em;
+}

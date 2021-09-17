@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="todo.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>    
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+</style>
+<div class="headingntable">
+<h1 class="topheading">My TODO List</h1>
+<table>
+
+  <tr>
+    <td data-label="ColorName" class="colorname">HIGH</td>
+    <td data-label="Color" class="color1"></td>
+  </tr>
+  <tr>
+    <td data-label="ColorName" class="colorname">MEDIUM</td>
+    <td data-label="Color" class="color2"></td>
+  </tr>
+  <tr>
+    <td data-label="ColorName" class="colorname">LOW</td>
+    <td data-label="Color" class="color3"></td>
+  </tr>
+</table>
+</div>
+<div id="date" class="date"></div>
+<ul id="listOfTasks"></ul>
+
+<div class="add-to-do" id="">
+	<input type="text" class="inputtext" id="input" placeholder="ADD TASK...">
+	<button onclick="addtask()" class="btn" id="addNameButton">ADD</button>
+</div>
+
+<div class="input_div">
+	<h2 class="priorityheading">Priority</h2>
+	<label class="c">HIGH
+        <input type="radio" id="rd1" name="1" value="HIGH"/>
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="c">MEDIUM
+        <input type="radio" id="rd2" name="1" value="MEDIUM">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="c">LOW
+        <input type="radio" id="rd3" name="1" value="LOW">
+        <span class="checkmark"></span>
+      </label>
+</div>
+
+<button id="clearall" class="btn2" onclick="clearall()">CLEAR ALL</button>
+
+<div class="content">
+	<ul id="list" class="todolist">
+	</ul>  
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>
